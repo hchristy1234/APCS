@@ -1,4 +1,4 @@
-package past.augAndSept;
+
 import java.util.*;
 public class firstlastArr {
     public static void main(String[] args) {

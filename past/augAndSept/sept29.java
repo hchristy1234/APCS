@@ -1,4 +1,4 @@
-package past.augAndSept;
+
 //import java.util.*;
 public class sept29 {
     public static void main (String[] args) {

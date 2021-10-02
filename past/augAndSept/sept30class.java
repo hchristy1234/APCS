@@ -1,4 +1,4 @@
-package past.augAndSept;
+
 public class sept30class {
     public static void main(String[] args) {
         // lesson 1
