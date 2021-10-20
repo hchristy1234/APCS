@@ -1,27 +1,21 @@
 public class shoe {
-    // attributes
     private String brand;
     private double size;
     private String color;
+    private sock sockies;
 
-    // constructors
-
-    // default constructor
     public shoe() {
-        brand = "crocs";
-        size = 8;
-        color = "rainbow";
+        brand = "Nike";
+        size = 10;
+        color = "white";
+        sockies = new sock();
     }
-
-    // custom constructor
-    public shoe(String b, double s, String c) {
+    public shoe(String b, double s, String c, sock soc) {
         brand = b;
         size = s;
         color = c;
+        sockies = soc;
     }
-
-    // getters
-
     public String getBrand() {
         return brand;
     }
@@ -31,8 +25,10 @@ public class shoe {
     public String getColor() {
         return color;
     }
+    public sock getSockies() {
+        return sockies;
+    }
 
-    // setters
     public void setBrand(String b) {
         brand = b;
     }
@@ -42,4 +38,8 @@ public class shoe {
     public void setColor(String c) {
         color = c;
     }
+    public void setSockies(sock s) {
+        sockies = s;
+    }
+
 }
