@@ -42,4 +42,9 @@ public class shoe {
     public void setColor(String c) {
         color = c;
     }
+
+    // toString method
+    public String toString() {
+        return "I am size " + size + ". I am the color " + color + ".";
+    }
 }

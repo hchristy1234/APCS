@@ -1,32 +1,32 @@
 import java.util.*;
-public class arraySorter {
+public class fifteenSort {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("how many ints do you want to put in?");
-        int num = scan.nextInt();
-        scan.nextLine();
-        int[] numbers = new int[num];
-        for (int i = 0; i < num; i++) {
+        int[] numbers = new int[15];
+        for (int i = 0; i < 15; i++) {
             System.out.print("enter an int: ");
             numbers[i] = scan.nextInt();
             scan.nextLine();
         }
-        for (int j = 0; j < num-1; j++) {
-            for (int i = 0; i < num-1; i++) {
+        boolean unsorted = true;
+        while (unsorted == true) {
+            int counter = 0;
+            System.out.println("in the loop");
+            for (int i = 0; i < 14; i++) {
                 if (numbers[i] > numbers[i+1]) {
                     int temp = numbers[i];
                     numbers[i] = numbers[i+1];
                     numbers[i+1] = temp;
+                    counter++;
                 }
             }
+            if (counter == 0) {
+                unsorted = false;
+            }
         }
-        for (int i = 0; i < num; i ++) {
+        for (int i = 0; i < 15; i ++) {
             System.out.print(numbers[i] + " ");
         }
     }
 }
-
-// bubble sort
-// best case: O(n)
-// worst case: O(n^2)
-// most common case: O(n^2)
+// n-1 iterations maximum

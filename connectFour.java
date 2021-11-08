@@ -25,6 +25,7 @@ public class connectFour {
         }
 
         int player = 1;
+        int counter = 0;
 
         while (playing == true) {
             boolean choose = true;
@@ -38,6 +39,7 @@ public class connectFour {
                     player = player%2 + 1;
                     columnAt[column-1] -= 1;
                     choose = false;
+                    counter++;
                 }
                 else {
                     System.out.println("That column is full. please choose again.");
@@ -82,8 +84,17 @@ public class connectFour {
                     }
                 }
             }
+            // check if board is full
+            if (counter == 42) {
+                playing = false;
+            }
         }
-        player = player%2 + 1;
-        System.out.println("congrats player#" + player);
+        if (counter != 42) {
+            player = player%2 + 1;
+            System.out.println("congrats player#" + player);
+        }
+        else {
+            System.out.println("there was a tie");
+        }
     }
 }
