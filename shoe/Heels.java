@@ -22,4 +22,13 @@ public class Heels extends shoe {
         height = h;
     }
 
+    public void stuff() {
+        System.out.println("i am heel");
+    }
+
+    // overwriting toString
+    // just putting "size" and "color" don't work bc they're not inherited over (private attributes)
+    public String toString() {
+        return "I am size " + getSize() + ". I am the color " + getColor() + ". My height is " + height;
+    }
 }

@@ -20,6 +20,16 @@ public class shoe {
         color = c;
     }
 
+    // custom custom constructor
+    // finesse the constructor
+    public Shoes(String c) {
+        size = 7;
+        for (int i = 0; i < 4; i++) {
+            size+= getSize();
+        }
+        color = c;
+    }
+
     // getters
 
     public String getBrand() {
@@ -41,6 +51,10 @@ public class shoe {
     }
     public void setColor(String c) {
         color = c;
+    }
+
+    public void stuff() {
+        System.out.println("i am shoe");
     }
 
     // toString method
