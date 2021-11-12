@@ -9,32 +9,52 @@ public class roadRace {
         for (int i = 0; i < numRacers; i++) {
             System.out.println("enter time for runner");
             int time = scan.nextInt();
-            runners[i].setTime(time);
             scan.nextLine();
-
             System.out.println("enter gender (M/F) for runner");
             String gender = scan.nextLine();
-            runners[i].setTime(gender);
+            runners[i] = new runner(time, gender);
         }
 
-        int overallOne = 0;
-        int overallTwo = 0;
-        int femaleOne = 0;
-        int femaleTwo = 0;
-        int maleOne = 0;
-        int maleTwo = 0;
-
-        // overall
-        int greatest = 0;
-        for (int j = 0; j < numRacers; j++) {
-            if (runners[j] != null && j = 0) {
-                int overallOne = runners[j].getTime();
-                greatest = ;
-            }
-            else if (runners[i] != null) {
-                if (runners[i].getTime > overallOne) {
-                    int overallOne = runners[i].getTime();
+        // sort runners
+        for (int i = 0; i < runners.length; i++) {
+            for (int j = 0; j < runners.length-1; j++) {
+                if (runners[j].getTime() > runners[j+1].getTime()) {
+                    runner temp = new runner(runners[j].getTime(), runners[j].getGender());
+                    runners[j] = runners[j+1];
+                    runners[j+1] = temp;
                 }
+            }
+        }
+
+        // overall winner
+        System.out.println("Overall winner #1: " + runners[0].getTime());
+        // remove first 2 elements
+        for (int i = 0; i < runners.length-2; i++) {
+            runners[i] = runners[i+2];
+        }
+
+        boolean femaleFound = false;
+        int fcounter = 0;
+        while (femaleFound == false) {
+            if (runners[fcounter].getGender().equals("F")) {
+                System.out.println("female winner #1: " + runners[fcounter].getTime());
+                femaleFound = true;
+            }
+            else {
+                fcounter++;
+            }
+        }
+
+        int nmf = 1;
+        int mcounter = 0;
+        while (nmf < 3) {
+            if (runners[mcounter].getGender().equals("M")) {
+                System.out.println("male winner #" + nmf + ": " + runners[mcounter].getTime());
+                nmf++;
+                mcounter++;
+            }
+            else {
+                mcounter++;
             }
         }
     }

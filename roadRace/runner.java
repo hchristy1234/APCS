@@ -2,7 +2,7 @@ public class runner {
     private int time;
     private String gender;
 
-    public racer(int t, String g) {
+    public runner(int t, String g) {
         time = t;
         gender = g;
     }
