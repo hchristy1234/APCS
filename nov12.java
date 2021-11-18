@@ -21,3 +21,5 @@ public class nov12 {
         System.out.println(x);
     }
 }
+
+// Fremont.getFamilies().get(0).getHumans()[0].getAge();
