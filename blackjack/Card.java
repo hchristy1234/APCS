@@ -2,10 +2,6 @@ public class Card {
     private String name;
     private String suit;
 
-    public Card() {
-        name = "ace";
-        suit = "spades";
-    }
     public Card(String n, String s) {
         name = n;
         suit = s;
