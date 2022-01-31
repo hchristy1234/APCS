@@ -13,7 +13,15 @@ public class Deck {
         deck = d;
     }
 
-    public ArrayList<Card> shuffle(ArrayList<Card> d) {
-        int z = int(42 * Math.random()); 
+    public void shuffle() {
+        ArrayList<Card> empty = new ArrayList<Card>();
+        while (deck.size() > 0) {
+            int z = (int)(deck.size() * Math.random());
+            empty.add(deck.get(z));
+            deck.remove(z);
+        }
+        for (int i = 0; i < empty.size(); i++) {
+            deck.add(empty.get(i));
+        }
     }
 }
