@@ -39,20 +39,20 @@ public class recursion {
     }
 
     public static int product(int a, int b) {
-        if (b==1) {
-            return a;
+        if (b==0) {
+            return 0;
         }
         else {
-            return sum(a, 0) + product(a, b-1);
+            return sum(a, product(a, b-1));
         }
     }
 
     public static int power(int a, int b) {
-        if (b==1) {
-            return a;
+        if (b==0) {
+            return 1;
         }
         else {
-            return product(a, 1) * power(a, b-1);
+            return product(a, power(a, b-1));
         }
     }
 }
