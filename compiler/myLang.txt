@@ -1,0 +1,21 @@
+(p){"Hello'} $this is a comment
+(str)[String1]{"wooohoooo'}
+(p){String1}
+(int)[int1]{5}
+(p)[var]{int1}
+(p){"Please input a String'}
+(in)[str]{myInputString}
+(p)[var]{myInputString}
+(if)["hello'{=}"hellop']
+(
+(p){"they are equal'}
+)
+(p){"testing math'}
+(math)\intNum/[80{+}30]
+(p)[var]{intNum}
+(loop)[4]
+(
+(p){"hola'}
+(p){"yo soy'}
+(int)[int1]{15}
+)

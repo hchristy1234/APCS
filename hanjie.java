@@ -73,6 +73,14 @@ public class hanjie {
                 }
                 else if(board[i][j].equals("X")) {
                     rowCounter++;
+                    // here
+                    String input = scan.nextLine();
+                    System.out.println("hello");
+                    for (int j = 0; j < 10; j++) {
+                        if (input.substring(0, 2).equals("var") && input.substring(2, 3).equals(" ")) {
+                            
+                        }
+                    }
                 }
                 if (rvCheckCounter!=3 && rowCounter == rowVals2[i][rvCheckCounter] && !board[i][j+1].equals("X")) {
                     rvCheckCounter++;
