@@ -1,4 +1,4 @@
-(p){"Hello'} $this is a comment
+(p){"Hello'} $this is an example of what code could look like for my language
 (str)[String1]{"wooohoooo'}
 (p){String1}
 (int)[int1]{5}
@@ -10,7 +10,6 @@
 (
 (p){"they are equal'}
 )
-(p){"testing math'}
 (math)\intNum/[80{+}30]
 (p)[var]{intNum}
 (loop)[4]
